@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Let me chatbot that for you</title>
+</head>
+<body>
+	<h1>Let me chatbot that for you</h1>
+	<p>Enter your question below:</p>
+	<form id="question-form">
+		<input type="text" id="question" placeholder="Enter your question here">
+		<button type="submit">Ask the chatbot</button>
+	</form>
+	<br>
+	<div id="response"></div>
+	<script>
+		const form = document.getElementById('question-form');
+		const responseDiv = document.getElementById('response');
+
+		form.addEventListener('submit', async (event) => {
+			event.preventDefault();
+			const question = document.getElementById('question').value;
+			const response = await askChatbot(question);
+			responseDiv.innerHTML = `<p>${response}</p>`;
+		});
+
+		async function askChatbot(question) {
+			// Replace this with code to send the question to a chatbot and get the response
+			return 'This is the chatbot response';
+		}
+	</script>
+</body>
+</html>
